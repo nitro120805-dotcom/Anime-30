@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+
+
+
+header {
+    background: #181818;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 15px 5%;
+}
+
+.logo {
+    color: #ffd400;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ffd400;
+}
+
+
+
+
+.search-box {
+    margin-left: auto;
+
+    display: flex;
+}
+
+.search-box input {
+    width: 220px;
+
+    padding: 10px;
+
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    background: #ffd400;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+
+
+main {
+    padding: 40px 5%;
+
+    min-height: 700px;
+}
+
+main h2 {
+    margin-bottom: 30px;
+
+    color: #ffd400;
+}
+
+
+
+
+.anime-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 25px;
+}
+
+
+
+.anime-card {
+    background: #1d1d1d;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.anime-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.anime-card img {
+    width: 100%;
+
+    height: 270px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.anime-info {
+    padding: 15px;
+}
+
+.anime-info h3 {
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.anime-info p {
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+
+.modal,
+.video-modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 1000;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+
+.modal-content {
+
+    position: relative;
+
+    width: 900px;
+    max-width: 95%;
+
+    background: #1c1c1c;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    display: flex;
+
+    gap: 30px;
+}
+
+.modal-content img {
+
+    width: 280px;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+.modal-info {
+    padding-top: 20px;
+}
+
+.modal-info h2 {
+    color: #ffd400;
+
+    margin-bottom: 20px;
+}
+
+.modal-info p {
+    color: #ccc;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+
+.watch-btn {
+
+    background: #ffd400;
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+.watch-btn:hover {
+    background: white;
+}
+
+
+
+
+.close {
+
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+
+
+.video-content {
+
+    position: relative;
+
+    width: 900px;
+
+    max-width: 95%;
+
+    aspect-ratio: 16 / 9;
+
+    background: black;
+}
+
+.video-content iframe {
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+
+footer {
+
+    background: #181818;
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #ffd400;
+}
+
+footer p {
+
+    margin-top: 10px;
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .search-box {
+        margin-left: 0;
+    }
+
+    .modal-content {
+        flex-direction: column;
+
+        align-items: center;
+
+        max-height: 90vh;overflow-y: auto;
+    }
+
+    .modal-content img {
+        width: 200px;
+
+        height: 290px;
+    }
+
+}

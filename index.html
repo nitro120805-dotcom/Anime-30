@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anime Movie</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <header>
+        <div class="logo">⭐ Anime Movie</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Anime</a>
+            <a href="#">Genre</a>
+            <a href="#">TV Show</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Anime..."
+            >
+            <button onclick="searchAnime()">Search</button>
+        </div>
+    </header>
+
+
+    
+    <main>
+
+        <h2>🔥 Anime List</h2>
+
+        <div id="animeList" class="anime-grid"></div>
+
+    </main>
+
+
+    
+    <div id="animeModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeAnime()">×</button>
+
+            <img id="modalPoster" src="" alt="Anime Poster">
+
+            <div class="modal-info">
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalDescription"></p>
+
+                <p id="modalInfo"></p>
+
+                <button id="watchButton" class="watch-btn">
+                    ▶ Watch Anime
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+    <div id="videoModal" class="video-modal">
+
+        <div class="video-content">
+
+            <button class="close" onclick="closeVideo()">×</button>
+
+            <iframe
+                id="videoPlayer"
+                src=""
+                title="Anime Video"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div>⭐ Anime Movie</div>
+        <p>© 2026 Anime Movie. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
